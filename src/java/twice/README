@@ -1,0 +1,9 @@
+To run the program, use:
+$ java Main <word> [<file>]
+
+If a file to use is left off, then the default file "lemma.txt" in the /files folder would be used.
+
+
+The tradeoff made here was to decompose the user-supplied word, allowing a quick comparison of the number of letters in the dictionary word. However, the rub is that the whole "dictionary" (the file, in this case) would have to be seen. But this would produce just one pass through the words.
+
+I chose to compare characters versus building a large tree structure that would have many superfluous permutations. Without indexing the dictionary, looping through the dictionary words was the play. The check short-circuits when any difference is found.
