@@ -35,6 +35,7 @@ public class DictionaryLemma implements Dictionary {
 					}
 				}
 			}
+			reader.close();
 		}
 		catch (IOException ioe) {
 			ioe.printStackTrace();
