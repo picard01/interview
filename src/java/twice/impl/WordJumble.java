@@ -15,8 +15,8 @@ public class WordJumble implements Word {
 	
 	public WordJumble(String word) {
 		this.word = word;
-		this.wordChars = new HashMap<Character, Integer>();
-		this.wordCharsDefault = new HashMap<Character, Integer>();
+		this.wordChars = new HashMap<Character, Integer>(28);
+		this.wordCharsDefault = new HashMap<Character, Integer>(28);
 		this.wordMatch = new TreeSet<String>();
 		
 		letterize(word);
